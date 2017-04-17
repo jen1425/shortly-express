@@ -1,1 +1,47 @@
 Notes
+
+Try to understand how it works or use the test to guide
+
+How it works:
+Front-end : collection of users, login and password, list of sites they've shortened.
+server : keep track of login and password and their list of sites
+
+Server:
+
+Route:
+shortly.js
+  get '/' : homepage to enter new site (post) or retrieve sites (get)
+  get /links : for a user, get links they've stored
+  post /links : for a user, post a new link they want : generate shortened and store.
+
+getting a url and shortening it : it all works!!
+
+1.Create a new user record on signup : eh
+  Create a signup link on home page and direct users to Signup Page. **to do**
+  Use Signup Page - *already created* - **to do**
+  Get username and password from Signup Page. **to do**
+  SEND to DATABASE :
+    Create table:
+    **Table 'users' Created to store usernames and passwords**
+    Database: Bookshelf : Object Relational Mapper for Javascript.
+                          ORM is an interface between ADT <-----> raw data types.
+              Uses knex SQL query builder + sqlite3 dB.
+    Add username / password entry to db:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  --------------------------------------------------------------------------------------------------------------------------
+  to do :
+  adding signup page : investigate front-end
