@@ -9,7 +9,7 @@ var Link = db.Model.extend({
     visits: 0
   },
   clicks: function() {
-    return this.hasMany(Click);
+    return this.hasMany(Click); // returns the click models in 'clicks' table that matches this Link.
   },
   initialize: function() {
     this.on('creating', function(model, attrs, options) {

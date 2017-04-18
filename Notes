@@ -16,19 +16,32 @@ shortly.js
 
 getting a url and shortening it : it all works!!
 
-1.Create a new user record on signup : eh
+1.Create a new user record in 'users' on signup : eh
   Create a signup link on home page and direct users to Signup Page. **to do**
   Use Signup Page - *already created* - **to do**
   Get username and password from Signup Page. **to do**
   SEND to DATABASE :
-    Create table:
+    Create schema of the tables in the db (config.js) :
     **Table 'users' Created to store usernames and passwords**
-    Database: Bookshelf : Object Relational Mapper for Javascript.
-                          ORM is an interface between ADT <-----> raw data types.
-              Uses knex SQL query builder + sqlite3 dB.
-    Add username / password entry to db:
+    Database: Bookshelf : Object Relational Mapper for Javascript (interface between ADT <-----> raw data types.)
+              Generates models / collections on an underlying SQL dB so you can interact with it using normal methods.
+              Uses knex SQL query builder : knex instance is a sql db. Use knex api for queries instead of sql commands directly
+                (select, where, join).
+              Uses sqlite3 dB.
+    Create tables of the db for links, users, clicks
+      **understand already defined tables click, link in app.js*
+    Add username / password entry to users dB
+
+2.
+  UPDATE DATABASE relationships:
+  urls : userId(FOREIGN KEY) which is users id(PRIMARY KEY)
+  set this.hasMany and this.belongsTo
+  Use join table to display their sites
 
 
+
+3. Understand how the program works: url is inputed, read, and processed to generate code in dB, and link added to the page.
+  How are the clicks processed
 
 
 

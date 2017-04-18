@@ -4,8 +4,8 @@ Shortly.Router = Backbone.Router.extend({
   },
 
   routes: {
-    '': 'index',
-    'create': 'create'
+    '': 'index', // All links tab
+    'create': 'create' // Shorten tab
   },
 
   swapView: function(view) {
